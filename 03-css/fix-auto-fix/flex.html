@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      .item {
+        border: 1px solid #000;
+      }
+      .container {
+        display: flex;
+      }
+      .left {
+        flex-basis: 300px;
+      }
+      .center {
+        flex-grow: 1;
+      }
+      .right {
+        flex-basis: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container item">
+      <div class="left item">111</div>
+      <div class="center item">222</div>
+      <div class="right item">333</div>
+    </div>
+  </body>
+</html>
