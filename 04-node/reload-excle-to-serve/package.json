@@ -1,0 +1,17 @@
+{
+  "name": "xmind-server",
+  "version": "1.0.0",
+  "description": " this is server",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "node-csv": "^0.1.2"
+  }
+}
