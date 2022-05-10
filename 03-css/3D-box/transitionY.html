@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D BOX</title>
+    <style>
+      :root {
+        --box-width: 80px;
+      }
+
+      .box-item {
+        position: absolute;
+        width: var(--box-width);
+        height: var(--box-width);
+        background-color: green;
+        border: 1px solid #000;
+        text-align: center;
+        line-height: var(--box-width);
+        animation: transY 2s infinite;
+      }
+
+      @keyframes transY {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(80px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box-item">123</div>
+  </body>
+</html>
