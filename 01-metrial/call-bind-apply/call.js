@@ -19,10 +19,14 @@ const obj = {
 getName.call(obj); //张三
 
 // 我们可以为Function增加一个call方法
-Function.prototype.call = function (context) {
+Function.prototype.call = function (context, ...args) {
+    // context入参为其他类型也需要被处理
+    // 同时需要对window进行处理
+    const context = context ? Object(context) : window
     context.fn = this;
-    context.fn();
+    const result = context.fn(...args);
     delete context.fn;
+    return result;
 };
 
 // Symbol版本
