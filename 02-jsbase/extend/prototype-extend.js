@@ -1,4 +1,29 @@
 // 原型链实现继承
+// ECMA262把原型链定义为ECMAScript的主要继承方式。
+function SuperType() {
+  this.property = true;
+}
+
+SuperType.prototype.getSuperValue = function() {
+  return this.property;
+}
+
+function SubType() {
+  this.subproperty = true;
+}
+
+SubType.prototype = new SuperType();
+
+SubType.prototype.getSubValue = function() {
+  return this.subproperty;
+}
+
+let instance = new SubType();
+console.log(instance.getSuperValue());
+// subType的实例可以使用SuperType的方法
+
+
+
 function Parent() {
   this.name = "parent";
   this.age = "50";
